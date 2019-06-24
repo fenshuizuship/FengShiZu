@@ -1,6 +1,5 @@
 package com.example.shap;
 
-
 import com.example.shap.base.BaseActivity;
 
 import com.example.shap.interfaces.contract.MainContracy;
