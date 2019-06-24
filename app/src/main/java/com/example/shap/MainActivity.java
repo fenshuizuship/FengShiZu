@@ -1,6 +1,7 @@
 package com.example.shap;
 
 import com.example.shap.base.BaseActivity;
+
 import com.example.shap.interfaces.contract.MainContracy;
 import com.example.shap.presenter.HomePresenter;
 
@@ -14,6 +15,11 @@ public class MainActivity extends BaseActivity<MainContracy.View,MainContracy.Pr
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initFragments() {
+
     }
 
     @Override
