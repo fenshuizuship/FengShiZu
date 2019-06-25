@@ -1,6 +1,7 @@
 package com.example.shap.ui.fragment;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -41,6 +42,7 @@ public class ClassificationFragment extends BaseFragment<Search.View, Search.Pre
     RecyclerView rx;
     Unbinder unbinder;
     private ArrayList<Bean_search.DataBeanX.FilterCategoryBean> filterCategoryBeans;
+    private ArrayList<String> strings;
 
     @Override
     protected Search.Presenter getPresenter() {
@@ -68,13 +70,15 @@ public class ClassificationFragment extends BaseFragment<Search.View, Search.Pre
                 List<Bean_search.DataBeanX.FilterCategoryBean> filterCategory = bean_search.getData().getFilterCategory();
                 filterCategoryBeans.addAll(filterCategory);
             }
+        strings = new ArrayList<>();
         for (int i = 0; i < filterCategoryBeans.size(); i++) {
-            
+            String name = filterCategoryBeans.get(i).getName();
+            strings.add(name);
         }
         tablayout2.setTabAdapter(new TabAdapter() {
                 @Override
                 public int getCount() {
-                    return 0;
+                    return strings.size();
                 }
 
                 @Override
@@ -89,7 +93,10 @@ public class ClassificationFragment extends BaseFragment<Search.View, Search.Pre
 
                 @Override
                 public ITabView.TabTitle getTitle(int position) {
-                    return null;
+                    return  new ITabView.TabTitle.Builder()
+                            .setContent(strings.get(position))
+                            .setTextColor(Color.BLUE, Color.BLACK)
+                            .build();
                 }
 
                 @Override
