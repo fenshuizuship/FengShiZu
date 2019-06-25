@@ -28,9 +28,10 @@ public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.P
     FrameLayout fl;
     private FragmentManager manager;
 
+public class MainActivity extends BaseActivity<MainContracy.View,MainContracy.Presenter> implements MainContracy.View {
     @Override
     protected MainContracy.Presenter getPresenter() {
-        return new HomePresenter();
+            return new HomePresenter();
     }
 
     @Override

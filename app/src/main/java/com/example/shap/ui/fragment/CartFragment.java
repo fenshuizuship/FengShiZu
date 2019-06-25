@@ -11,9 +11,14 @@ import com.example.shap.R;
 import com.example.shap.base.BaseFragment;
 import com.example.shap.interfaces.IBasePresenter;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class CartFragment extends Fragment {
 
-public class SubjectFragment extends BaseFragment {
-
+    public CartFragment() {
+        // 123
+    }
 
     @Override
     protected IBasePresenter getPresenter() {
