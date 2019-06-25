@@ -1,5 +1,6 @@
 package com.example.shap.interfaces;
 
+import com.example.shap.bean.Bean_search;
 import com.example.shap.bean.IndexBean;
 
 import io.reactivex.Flowable;
@@ -13,4 +14,7 @@ public interface Api {
 
 
     //==============fgsdf----------------
+    //http://cdwan.cn:8360/api/goods/list
+    @GET("goods/list")
+    Flowable<Bean_search> getdata_search();
 }

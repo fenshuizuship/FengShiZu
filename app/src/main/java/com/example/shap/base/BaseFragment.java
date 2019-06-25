@@ -27,7 +27,9 @@ public abstract class BaseFragment<V extends IBaseView, P extends IBasePresenter
         bind = ButterKnife.bind(this, inflate);
 
         mPresenter = getPresenter();
-        mPresenter.attchView(this);
+        if (mPresenter != null) {
+            mPresenter.attchView(this);
+        }
 
         initFragments();
         initView();

@@ -11,7 +11,11 @@ import com.example.shap.R;
 import com.example.shap.base.BaseFragment;
 import com.example.shap.interfaces.IBasePresenter;
 
-public class HomeFragment extends BaseFragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ShoppingFragment extends BaseFragment {
+
 
 
     @Override
@@ -21,7 +25,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_shopping;
     }
 
 }

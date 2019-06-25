@@ -11,8 +11,8 @@ import com.example.shap.R;
 import com.example.shap.base.BaseFragment;
 import com.example.shap.interfaces.IBasePresenter;
 
-public class HomeFragment extends BaseFragment {
 
+public class MyFragment extends BaseFragment {
 
     @Override
     protected IBasePresenter getPresenter() {
@@ -21,7 +21,6 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_my;
     }
-
 }
