@@ -1,6 +1,5 @@
 package com.example.shap;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +15,6 @@ import com.example.shap.ui.fragment.ShoppingFragment;
 import com.example.shap.ui.fragment.SubjectFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.Presenter> implements MainContracy.View {
 
@@ -28,7 +26,6 @@ public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.P
     FrameLayout fl;
     private FragmentManager manager;
 
-public class MainActivity extends BaseActivity<MainContracy.View,MainContracy.Presenter> implements MainContracy.View {
     @Override
     protected MainContracy.Presenter getPresenter() {
             return new HomePresenter();

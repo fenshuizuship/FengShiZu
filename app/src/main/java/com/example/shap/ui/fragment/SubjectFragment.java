@@ -14,10 +14,11 @@ import com.example.shap.interfaces.IBasePresenter;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CartFragment extends Fragment {
+public class SubjectFragment extends BaseFragment {
 
-    public CartFragment() {
-        // 123
+
+    public SubjectFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -27,7 +28,7 @@ public class CartFragment extends Fragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_subject;
+        return R.layout.fragment_subject2;
     }
 
 }
