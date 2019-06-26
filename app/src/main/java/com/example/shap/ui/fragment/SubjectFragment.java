@@ -16,11 +16,6 @@ import com.example.shap.interfaces.IBasePresenter;
  */
 public class SubjectFragment extends BaseFragment {
 
-
-    public SubjectFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     protected IBasePresenter getPresenter() {
         return null;
