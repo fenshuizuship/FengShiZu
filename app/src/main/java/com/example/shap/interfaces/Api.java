@@ -2,9 +2,11 @@ package com.example.shap.interfaces;
 
 import com.example.shap.bean.Bean_search;
 import com.example.shap.bean.IndexBean;
+import com.example.shap.bean.ShoppingCartBean;
 import com.example.shap.bean.SubjectDetailBean;
 import com.example.shap.bean.SubjectListBean;
 import com.example.shap.bean.SubjectRelatedBean;
+
 
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
@@ -15,12 +17,15 @@ public interface Api {
     //---------home---------
     @GET("index/index")
     Flowable<IndexBean> getData();
-
-
     //==============fgsdf----------------
     //http://cdwan.cn:8360/api/goods/list
     @GET("goods/list")
     Flowable<Bean_search> getdata_search();
+
+	//============Cart==========
+    @GET()
+    Flowable<ShoppingCartBean> getdata_cart();
+
 
 
     //============subject==========

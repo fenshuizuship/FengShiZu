@@ -42,7 +42,7 @@ public abstract class BaseActivity<V extends IBaseView, P extends IBasePresenter
             addContentView(inflate, params);
         } else {
             mPresenter = getPresenter();
-            mPresenter.attchView(this);
+       //     mPresenter.attchView(this);
 
             initFragments();
             initView();

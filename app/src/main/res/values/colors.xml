@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="colorAccent">#D81B60</color>
+    <color name="hui">#CECDCD</color>
+    <color name="write">#ffffff</color>
     <color name="white">#ffffff</color>
     <!-- 白色 -->
     <color name="ivory">#fffff0</color>
@@ -295,10 +297,10 @@
     <!-- 海军色 -->
 
 
-
+    <color name="white_c">#FFFFFF</color>
     <color name="colorPrimary">#eb4f38</color>
     <color name="colorPrimaryDark">#009688</color>
-
+    <color name="purple_button">#855090</color>
     <color name="bg_color">#f1f1f1</color>
     <color name="black">#000</color>
     <color name="transparent">#0000</color>
@@ -319,14 +321,13 @@
     <color name="login_button">#ff775025</color>
 
 
-
     <color name="app_green">#ff45c01a</color>
     <color name="app_green_alpha">#7f45c01a</color>
 
 
-    <item type="color" name="green_btn_color_normal">@color/app_green</item>
+    <item name="green_btn_color_normal" type="color">@color/app_green</item>
 
-    <item type="color" name="green_btn_color_disable">@color/app_green_alpha</item>
+    <item name="green_btn_color_disable" type="color">@color/app_green_alpha</item>
 
     <color name="green_btn_color_pressed">#ff298409</color>
     <color name="red_btn_color_normal">#B42329</color>
@@ -348,5 +349,6 @@
     <color name="normal_text_color_disable">#7f353535</color>
     <color name="white_color_disable">#7fffffff</color>
     <color name="white_color_selector">#fff</color>
-
+    <color name="qianhui">#E0E0E0</color>
 </resources>
+

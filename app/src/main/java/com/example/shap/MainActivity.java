@@ -1,12 +1,16 @@
 package com.example.shap;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.widget.FrameLayout;
 
 import com.example.shap.base.BaseActivity;
-import com.example.shap.interfaces.contract.MainContracy;
+import com.example.shap.interfaces.IBasePresenter;
+
+
 import com.example.shap.presenter.HomePresenter;
 import com.example.shap.ui.fragment.CartFragment;
 import com.example.shap.ui.fragment.ClassificationFragment;
@@ -15,21 +19,18 @@ import com.example.shap.ui.fragment.MyFragment;
 import com.example.shap.ui.fragment.SubjectFragment;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.Presenter> implements MainContracy.View {
+public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.tb)
-    Toolbar tb;
     @BindView(R.id.tl)
     TabLayout mTl;
     @BindView(R.id.fl)
     FrameLayout fl;
+    @BindView(R.id.tb)
+    Toolbar mTb;
     private FragmentManager manager;
 
-    @Override
-    protected MainContracy.Presenter getPresenter() {
-            return new HomePresenter();
-    }
 
     @Override
     protected int getLayoutId() {
@@ -49,8 +50,15 @@ public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.P
     }
 
     @Override
+    protected IBasePresenter getPresenter() {
+        return null;
+    }
+
+    @Override
     protected void initView() {
         addFragment(getSupportFragmentManager(), HomeFragment.class, R.id.fl, null);
+        mTb.setTitle("");
+        setSupportActionBar(mTb);
     }
 
     @Override
@@ -85,13 +93,14 @@ public class MainActivity extends BaseActivity<MainContracy.View, MainContracy.P
     }
 
     @Override
-    public void getData() {
-
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(1, 1, 1, "");
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     protected void initData() {
-        mPresenter.getData();
+
     }
 
 

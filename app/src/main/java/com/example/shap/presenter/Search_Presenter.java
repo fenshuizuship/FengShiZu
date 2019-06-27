@@ -12,8 +12,9 @@ public class Search_Presenter extends BasePresenter<Search.View> implements Sear
 
     @Override
     public void getData_search() {
-        addSubscribe(HttpUtils.getMyServer().getdata_search().compose(RxUtils.<Bean_search>rxScheduler()).subscribeWith(new CommonSubscriber<Bean_search>(mView) {
-
+        addSubscribe(HttpUtils.getMyServer().getdata_search()
+                .compose(RxUtils.<Bean_search>rxScheduler())
+                .subscribeWith(new CommonSubscriber<Bean_search>(mView) {
             @Override
             public void onNext(Bean_search bean_search) {
                 mView.getData_search(bean_search);

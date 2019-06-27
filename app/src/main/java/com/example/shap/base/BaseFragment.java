@@ -43,6 +43,7 @@ public abstract class BaseFragment<V extends IBaseView, P extends IBasePresenter
 
     }
 
+
     protected void initData() {
 
     }

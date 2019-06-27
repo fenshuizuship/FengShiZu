@@ -381,7 +381,7 @@ public class IndexBean {
             private String pic_url;
             private int sort_order;
             private int is_show;
-            private float floor_price;
+            private String floor_price;
             private String app_list_pic_url;
             private int is_new;
             private String new_pic_url;
@@ -443,11 +443,11 @@ public class IndexBean {
                 this.is_show = is_show;
             }
 
-            public float getFloor_price() {
+            public String getFloor_price() {
                 return floor_price;
             }
 
-            public void setFloor_price(float floor_price) {
+            public void setFloor_price(String floor_price) {
                 this.floor_price = floor_price;
             }
 
