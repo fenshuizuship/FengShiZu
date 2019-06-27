@@ -3,36 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_btn_color_disable"
+    android:background="@color/grey_btn_color_normal"
     >
 
     <RelativeLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/x35"
         >
         <TextView
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="30天无忧退货"
-            android:layout_margin="10dp"
+            android:text="◆ 30天无忧退货"
+            android:layout_centerVertical="true"
             />
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="48小时快速退款"
-            android:layout_centerHorizontal="true"
+            android:text="◆ 48小时快速退款"
+            android:layout_toRightOf="@id/tv"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x15"
             />
         <TextView
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="48小时快速退款"
+            android:text="◆ 满88元免费包邮"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+
             />
     </RelativeLayout>
 
@@ -42,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/ll"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/y40"
         android:background="@color/white_color_selector"
         >
 
@@ -52,7 +54,7 @@
     <LinearLayout
         android:id="@+id/rl_bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/y40"
         android:layout_alignParentBottom="true"
         android:background="@color/white_c">
 
@@ -62,10 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:button="@drawable/check_box_style"
             android:checkMark="?android:attr/listChoiceIndicatorMultiple"
             android:gravity="center"
-            android:paddingLeft="10dp"
+            android:paddingLeft="@dimen/x10"
             android:scaleX="0.6"
             android:scaleY="0.6"
             android:text="全选"
@@ -78,7 +79,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="@dimen/x5"
             android:text="合计:0.00"
             android:textColor="@color/black" />
         <TextView
@@ -88,11 +89,11 @@
             android:text="编辑"
             android:layout_gravity="center_vertical"
             android:textSize="15dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="@dimen/x10"
             />
         <TextView
             android:id="@+id/tv_settlement"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/x95"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="@color/red_btn_color_normal"
