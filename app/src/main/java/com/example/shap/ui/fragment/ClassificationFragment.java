@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import com.example.shap.R;
 import com.example.shap.base.BaseFragment;
 import com.example.shap.bean.Bean_search;
+import com.example.shap.bean.ShoppingCartBean;
 import com.example.shap.interfaces.contract.Search;
 import com.example.shap.presenter.Search_Presenter;
 
