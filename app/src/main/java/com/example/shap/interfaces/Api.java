@@ -11,10 +11,10 @@ public interface Api {
     //---------home---------
     @GET("index/index")
     Flowable<IndexBean> getData();
-
-
     //==============fgsdf----------------
     //http://cdwan.cn:8360/api/goods/list
     @GET("goods/list")
     Flowable<Bean_search> getdata_search();
+
+
 }
