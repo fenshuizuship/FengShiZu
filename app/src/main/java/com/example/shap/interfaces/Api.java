@@ -5,6 +5,7 @@ import com.example.shap.bean.IndexBean;
 import com.example.shap.bean.ShoppingCartBean;
 import com.example.shap.bean.SubjectDetailBean;
 import com.example.shap.bean.SubjectListBean;
+import com.example.shap.bean.SubjectRelatedBean;
 
 
 import io.reactivex.Flowable;

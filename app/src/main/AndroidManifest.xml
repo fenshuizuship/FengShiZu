@@ -17,7 +17,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.activity.StartActivity"></activity>
-        <activity android:name=".MainActivity">
         <activity android:name=".RelatedActivity"></activity>
         <activity
             android:name=".MainActivity"
