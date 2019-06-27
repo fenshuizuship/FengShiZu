@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.example.shap.R;
 import com.example.shap.RelatedActivity;
 import com.example.shap.bean.SubjectRelatedBean;
+import com.example.shap.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,7 @@ public class SubRelatedAdapter extends RecyclerView.Adapter {
 //                Intent intent = new Intent(mContext, RelatedActivity.class);
 //                intent.putExtra("listId", id);
 //                mContext.startActivity(intent);
+                ToastUtil.showLong("url");
             }
         });
     }
