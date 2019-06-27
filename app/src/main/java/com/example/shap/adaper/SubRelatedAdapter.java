@@ -45,8 +45,8 @@ public class SubRelatedAdapter extends RecyclerView.Adapter {
         SubjectRelatedBean.DataBean dataBean = mSubjectRelatedBeans.get(i);
         Glide.with(mContext).load(dataBean.getScene_pic_url()).into(viewHolder.mSubjectItemRelatedIv);
         viewHolder.mSubjectItemRelatedTv1.setText(dataBean.getTitle());
-        viewHolder.mSubjectItemRelatedTv1.setText(dataBean.getSubtitle());
-        viewHolder.mSubjectItemRelatedTv1.setText(dataBean.getPrice_info()+"元起");
+        viewHolder.mSubjectItemRelatedTv2.setText(dataBean.getSubtitle());
+        viewHolder.mSubjectItemRelatedTv3.setText(dataBean.getPrice_info()+"元起");
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
