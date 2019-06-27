@@ -9,10 +9,13 @@ import android.widget.FrameLayout;
 
 import com.example.shap.base.BaseActivity;
 import com.example.shap.interfaces.IBasePresenter;
+
+
+import com.example.shap.presenter.HomePresenter;
+import com.example.shap.ui.fragment.CartFragment;
 import com.example.shap.ui.fragment.ClassificationFragment;
 import com.example.shap.ui.fragment.HomeFragment;
 import com.example.shap.ui.fragment.MyFragment;
-import com.example.shap.ui.fragment.ShoppingFragment;
 import com.example.shap.ui.fragment.SubjectFragment;
 
 import butterknife.BindView;
@@ -71,7 +74,7 @@ public class MainActivity extends BaseActivity {
                 } else if (position == 2) {
                     addFragment(manager, ClassificationFragment.class, R.id.fl, null);
                 } else if (position == 3) {
-                    addFragment(manager, ShoppingFragment.class, R.id.fl, null);
+                    addFragment(manager, CartFragment.class, R.id.fl, null);
                 } else if (position == 4) {
                     addFragment(manager, MyFragment.class, R.id.fl, null);
                 }
