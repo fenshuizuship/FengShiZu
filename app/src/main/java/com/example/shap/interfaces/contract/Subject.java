@@ -12,4 +12,5 @@ public interface Subject {
     interface SubjetPresenter extends IBasePresenter<SubjectView> {
         void getSubjectListBean();
     }
+
 }

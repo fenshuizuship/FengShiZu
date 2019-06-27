@@ -1,6 +1,7 @@
 package com.example.shap.adaper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,16 +12,19 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.shap.R;
+import com.example.shap.RelatedActivity;
 import com.example.shap.bean.SubjectListBean;
 
 import java.util.ArrayList;
 
  public class SubListAdapter extends RecyclerView.Adapter {
 
-    private ArrayList<SubjectListBean.DataBeanX.DataBean> mDataBeans;
-    private Context mContext;
+     private Context mContext;
+     private ArrayList<SubjectListBean.DataBeanX.DataBean> mDataBeans;
 
-    public SubListAdapter(ArrayList<SubjectListBean.DataBeanX.DataBean> dataBeans) {
+
+    public SubListAdapter(Context context, ArrayList<SubjectListBean.DataBeanX.DataBean> dataBeans) {
+        mContext = context;
 
         mDataBeans = dataBeans;
     }
@@ -28,7 +32,7 @@ import java.util.ArrayList;
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        mContext = viewGroup.getContext();
+
         View inflate = LayoutInflater.from(mContext).inflate(R.layout.item_subject_list, null);
         return new ViewHolder(inflate);
     }
@@ -42,12 +46,14 @@ import java.util.ArrayList;
         viewHolder.mSubjectItemTv2.setText(model.getSubtitle());
         viewHolder.mSubjectItemTv3.setText(model.getPrice_info()+"元起");
 
-        int id = model.getId();
+        final int id = model.getId();
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, RelatedActivity.class);
+                intent.putExtra("listId",id);
+                mContext.startActivity(intent);
             }
         });
     }

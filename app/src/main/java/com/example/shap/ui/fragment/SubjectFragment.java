@@ -47,7 +47,7 @@ public class SubjectFragment extends BaseFragment<Subject.SubjectView,
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         mSubjectListRv.setLayoutManager(linearLayoutManager);
         mDataBeans = new ArrayList<>();
-        mSubListAdapter = new SubListAdapter(mDataBeans);
+        mSubListAdapter = new SubListAdapter( getContext(),mDataBeans);
         mSubjectListRv.setAdapter(mSubListAdapter);
     }
 
