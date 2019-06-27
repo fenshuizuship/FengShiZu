@@ -297,10 +297,10 @@
     <!-- 海军色 -->
 
 
-
+    <color name="white_c">#FFFFFF</color>
     <color name="colorPrimary">#eb4f38</color>
     <color name="colorPrimaryDark">#009688</color>
-
+    <color name="purple_button">#855090</color>
     <color name="bg_color">#f1f1f1</color>
     <color name="black">#000</color>
     <color name="transparent">#0000</color>
@@ -350,5 +350,6 @@
     <color name="normal_text_color_disable">#7f353535</color>
     <color name="white_color_disable">#7fffffff</color>
     <color name="white_color_selector">#fff</color>
+    <color name="qianhui">#E0E0E0</color>
 </resources>
 

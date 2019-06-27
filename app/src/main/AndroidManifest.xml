@@ -17,9 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.StartActivity"></activity>
-
-        <activity android:name=".RelatedActivity"></activity>
+        <activity android:name=".RelatedActivity"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoTheme">
