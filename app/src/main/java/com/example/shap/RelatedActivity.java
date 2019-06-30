@@ -64,7 +64,7 @@ public class RelatedActivity extends BaseActivity<SubjectRelated.SubjectRelatedV
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         mItemRelatedRv.setLayoutManager(gridLayoutManager);
         mDataBeans = new ArrayList<>();
-        mSubRelatedAdapter = new SubRelatedAdapter(RelatedActivity.this, mDataBeans);
+        mSubRelatedAdapter = new SubRelatedAdapter(RelatedActivity.this, mDataBeans,mListId);
         mItemRelatedRv.setAdapter(mSubRelatedAdapter);
     }
 

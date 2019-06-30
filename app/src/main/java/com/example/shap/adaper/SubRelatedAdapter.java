@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.shap.DetailActivity;
 import com.example.shap.R;
 import com.example.shap.RelatedActivity;
 import com.example.shap.bean.SubjectRelatedBean;
@@ -23,12 +24,16 @@ public class SubRelatedAdapter extends RecyclerView.Adapter {
 
     private Context mContext;
     private ArrayList<SubjectRelatedBean.DataBean> mSubjectRelatedBeans;
+    private int mListId;
 
 
-    public SubRelatedAdapter(Context context, ArrayList<SubjectRelatedBean.DataBean> subjectRelatedBeans) {
+    public SubRelatedAdapter(Context context,
+       ArrayList<SubjectRelatedBean.DataBean> subjectRelatedBeans,
+                             int listId) {
         mContext = context;
 
         mSubjectRelatedBeans = subjectRelatedBeans;
+        mListId = listId;
     }
 
     @NonNull
@@ -51,10 +56,9 @@ public class SubRelatedAdapter extends RecyclerView.Adapter {
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mContext, RelatedActivity.class);
-//                intent.putExtra("listId", id);
-//                mContext.startActivity(intent);
-                ToastUtil.showLong("url");
+                Intent intent = new Intent(mContext, DetailActivity.class);
+                intent.putExtra("listId", mListId);
+                mContext.startActivity(intent);
             }
         });
     }
